@@ -9,9 +9,6 @@ prepared = root/'data/prepared/metadata.json'
 source = root/'data/Online Retail.xlsx'
 uci_zip = 'https://archive.ics.uci.edu/static/public/352/online+retail.zip'
 if not prepared.exists():
-    st.set_page_config(page_title='Customer Retention Intelligence',layout='wide')
-    st.title('Preparing verified historical retail data')
-    st.info('Downloading the public UCI Online Retail dataset and calculating analytics. Initial deployment startup requires network access and may be slow.')
     try:
         source.parent.mkdir(parents=True,exist_ok=True)
         if not source.exists():
